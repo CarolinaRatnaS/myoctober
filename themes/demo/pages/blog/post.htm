@@ -8,7 +8,9 @@ is_hidden = 0
 slug = "{{ :slug }}"
 categoryPage = 404
 
-[commentsPost]
+[MaDnh\Disqus\Components\Disqus disqus]
+page_id_prefix = "blog_post"
+page_id = "{{ :slug }}"
 ==
 <?php
 function onEnd()
@@ -122,7 +124,7 @@ function onEnd()
 							<!-- Post Comments -->
 							<div id="post-comments">
 
-								{% component 'commentsPost' %}
+								{% component 'disqus' page_id_prefix='blog_post' page_id=post.id %}
 							
 								
 							</div>
