@@ -1,0 +1,93 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CobaOctober - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <!-- <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet"> -->
+        <link href="{{ 'assets/css/base.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            <!-- {% partial 'site/footer' %} -->
+        </footer>
+
+        <!-- Scripts -->
+        <!-- <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script> -->
+
+        <!-- jquery core -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/jquery-1.11.0.min.js'|theme }}"></script>
+
+        <!-- imagesLoaded jquery plugin -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/imagesloaded.pkgd.min.js'|theme }}"></script>
+        
+        <!-- jquery isotop plugin -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/isotope.pkgd.min.js'|theme }}"></script>
+
+        <!-- jquery history neede for ajax pages -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/jquery.history.js'|theme }}"></script>
+
+        <!-- owwwlab jquery kenburn slider plugin -->
+        <script type="text/javascript" src="{{ 'assets/js/jquery.owwwlab-kenburns.js'|theme }}"></script>
+
+        <!-- owwwlab jquery double carousel plugin -->
+        <script type="text/javascript" src="{{ 'assets/js/jquery.owwwlab-DoubleCarousel.js'|theme }}"></script>
+
+        <!-- owwwwlab jquery video background plugin -->
+        <script type="text/javascript" src="{{ 'assets/js/jquery.owwwlab-video.js'|theme }}"></script>
+
+        <!-- tweenmax animation framework -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/TweenMax.min.js'|theme }}"></script>
+
+        <!-- jquery nice scroll plugin needed for vertical portfolio page -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/jquery.nicescroll.min.js'|theme }}"></script>
+
+        <!-- jquery magnific popup needed for ligh-boxes -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/jquery.magnific-popup.js'|theme }}"></script>
+
+        <!-- html5 media player -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/mediaelement-and-player.min.js'|theme }}"></script>
+
+        <!-- jquery inview plugin -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/jquery.inview.min.js'|theme }}"></script>
+
+        <!-- smooth scroll -->
+        <script type="text/javascript" src="{{ 'assets/js/vendors/smoothscroll.js'|theme }}"></script>
+
+        
+
+        <!-- Master Slider -->
+        <script src="{{ 'assets/masterslider/jquery.easing.min.js'|theme }}"></script>
+        <script src="{{ 'assets/masterslider/masterslider.min.js'|theme }}"></script>
+        
+        <!-- theme custom scripts -->
+        <script type="text/javascript" src="{{ 'assets/js/custom.js'|theme }}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

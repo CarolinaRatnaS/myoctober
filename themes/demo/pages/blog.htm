@@ -1,0 +1,65 @@
+title = "Blog"
+url = "/blog"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+
+
+<!-- Page main wrapper -->
+<div id="main-content" class="blog-grid dark-template">
+	<div class="page-wrapper">
+
+		<!-- Page sidebar -->
+		<div class="page-side">
+			<div class="inner-wrapper vcenter-wrapper">
+				<div class="side-content vcenter">
+					<div class="title">
+						<span class="second-part">News and</span>
+						<span>Blog</span>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+		</div>
+		<!-- /Page sidebar -->
+
+		<!-- Page main content-->
+		<div class="page-main blog-list">
+
+			<!-- blog grid wrapper -->	
+			<div class="grid-blog-list">
+				
+				<!-- post Item -->		
+				<div class="post">
+					<div class="post-wrapper">
+						<div class="image-wrapper">
+						</div>
+						<div class="post-content-wrapper">
+							{% component 'blogPosts' %}
+						</div>
+					</div>
+				</div>
+				<!--/ post Item -->
+
+				
+				
+			</div>
+			<div id="columns-separator"></div>
+			<!--/ Blog grid wrapper -->
+
+							
+		</div>
+		<!-- /Page main content-->
+		
+	</div>
+
+</div>
+<!-- /Page main wrapper -->
