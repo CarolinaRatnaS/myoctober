@@ -2,8 +2,10 @@ title = "Contact"
 url = "/contact"
 layout = "default"
 is_hidden = 0
-==
 
+[DevINX\ContactUs\Components\ContactForm contactForm]
+injectBootstrapAssets = 1
+==
 <!--Page main wrapper-->
 <div id="main-content"> 
 	<div class="page-wrapper regular-page">
@@ -50,20 +52,9 @@ is_hidden = 0
 			
 			<div class="row mb-large">
 				
-				<div class="col-md-12">
-					<h3 class="lined allcaps">Contact form</h3>
-
-					<form method="POST" action="https://formspree.io/carolinaratnasari@gmail.com" id="contact-form">
-					  <input class="form-control" type="text" name="name" id="name" placeholder="Name">
-					  <br />
-					  <input class="form-control" type="email" name="email" placeholder="Your email">
-					  <br />
-					  <textarea class="form-control" name="message" placeholder="Test Message"></textarea>
-					  <br />
-					  <!-- <button class="btn btn-toranj pull-right" type="submit">Send Test</button> -->
-					  <input class="btn btn-toranj pull-right" name="submit" type="submit" id="submit" value="Send">
-					</form>
-				</div>
+				
+				{% component 'contactForm' %}
+				
 			</div>					
 
 			<hr/>
@@ -72,3 +63,5 @@ is_hidden = 0
 	</div>
 </div>
 <!--/Page main wrapper-->
+{% framework %}
+{% framework extras %}
